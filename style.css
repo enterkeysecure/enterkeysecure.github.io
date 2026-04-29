@@ -1,0 +1,179 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 35px;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* NAV */
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #2563eb;
+}
+
+/* MAIN */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  gap: 80px;
+}
+
+/* FORM */
+.form-box {
+  background: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  width: 380px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* INPUT GROUP */
+.input-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+/* INPUT */
+.input-group input {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px 0 40px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* LOADER */
+.loader {
+  display: none;
+  margin: 15px auto;
+  border: 4px solid #eee;
+  border-top: 4px solid #2563eb;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* MESSAGE */
+#message {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* FOOTER */
+.footer {
+  background: #fff;
+  padding: 25px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-links a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: #555;
+}
+
+.footer-links a:hover {
+  color: #2563eb;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .sidebar img {
+    max-width: 280px;
+  }
+}

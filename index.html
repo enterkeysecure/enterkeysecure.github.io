@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Secure Area</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '8038c0fbc1e30bb63bd04ffc3d2e1081bc26a7b5';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript>Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
+    <span>Customer Secure Area</span>
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Refund Policy</a>
+    <a href="#">Disclaimer</a>
+    <a href="#">Important Notice</a>
+    <a href="#">Customer Area</a>
+    <a href="#">Happy Customer</a>
+  </nav>
+</header>
+
+<!-- MAIN -->
+<div class="container">
+
+  <!-- FORM -->
+  <div class="form-box">
+    <h2>Secure Download Form</h2>
+
+    <div class="input-group">
+      <i class="fas fa-user"></i>
+      <input type="text" id="name" placeholder="Name">
+    </div>
+
+    <div class="input-group">
+      <i class="fas fa-envelope"></i>
+      <input type="email" id="email" placeholder="Email">
+    </div>
+
+    <div class="input-group">
+      <i class="fas fa-phone"></i>
+      <input type="tel" id="phone" placeholder="Phone Number">
+    </div>
+
+    <div class="input-group">
+      <i class="fas fa-key"></i>
+      <input type="text" id="key" placeholder="Activation Key">
+    </div>
+
+    <button id="downloadBtn">Download</button>
+
+    <div class="loader" id="loader"></div>
+    <p id="message"></p>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgm47SDMgJ4vNrkabbC-J5NRxbHMOwxlT9IoYWb9bBSswjF5Uhjjel3iUBtxk2hnvuVgejZjLMiXcCtZNvWG_a3rp7ANqtVFw_OXQy7wEVX2dtKr6A-eYp4fMGwU7opoqfI3fy7UaNF6sVksN3230e2KbqQ2xnCOXy7vZSsmouRpSLn1WWoXs4WH-n9/s1536/cx.png" alt="Customer Help">
+    <h3>Customer Help Center</h3>
+    <p>We assist you with secure downloads and activation support.</p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="#">Home</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Refund Policy</a>
+    <a href="#">Disclaimer</a>
+    <a href="#">Important Notice</a>
+    <a href="#">Customer Area</a>
+    <a href="#">Happy Customer</a>
+  </div>
+
+  <p>© 2026 Customer Secure Area</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+const btn = document.getElementById("downloadBtn");
+const loader = document.getElementById("loader");
+const message = document.getElementById("message");
+
+btn.onclick = function () {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const key = document.getElementById("key").value.trim();
+
+  if (!name || !email || !phone || !key) {
+    message.style.color = "red";
+    message.innerText = "All fields are mandatory!";
+    return;
+  }
+
+  message.innerText = "";
+  loader.style.display = "block";
+
+  setTimeout(() => {
+    loader.style.display = "none";
+    message.style.color = "red";
+    message.innerText = "Download Error (Code: DL-403): Your details could not be verified. Kindly contact technical support immediately to resolve this issue.";
+  }, 3000);
+};
+</script>
+
+</body>
+</html>
